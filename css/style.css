@@ -110,7 +110,7 @@ h1{
 
     .card-title{
       color: var(--white);
-      padding: .5rem 0;
+      padding: 1rem 0 .5rem 0;
       white-space: pre-line;
     }
 
@@ -207,6 +207,10 @@ h1{
   .card-content{
     grid-area: c-content;
     padding: 3rem;
+  }
+  
+  .card-title{
+    padding: .5rem 0;
   }
 
   .card-info{
