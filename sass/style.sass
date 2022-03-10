@@ -30,7 +30,12 @@ body
 
 body
   background-color: var(--dark-blue)
-
+  display: grid
+  grid-template-rows: 1fr auto
+  grid-template-areas: "c-main" "c-footer"
+  justify-content: center
+  gap: 20px
+  padding-top: 35px
 
 body,
 p
@@ -43,6 +48,7 @@ h1
   line-height: 2rem
 
 .main-container
+  grid-area: c-main
   max-width: 1440px
   height: 100%
   margin: 0 auto
@@ -115,10 +121,34 @@ h1
 .text-highlighted
   color: var(--soft-violet)
 
+.main-footer
+  grid-area: foot
+  min-height: 65px
+  color: var(--transparent-white-h)
+  text-align: center
+  font-size: 12px
+  line-height: 1.1
+  display: flex
+  justify-content: center
+  align-content: center
+  align-items: center
+  grid-area: c-footer
+
+  a
+    display: inline-block
+    margin-left: 2px
+    color: var(--soft-violet-overlay)
+    text-decoration: none
+
 @media screen and (min-width: 375px)
   .card-title,
   .card-description
     white-space: normal
+
+@media screen and (min-width: 998px)
+  body
+    gap: 0
+    padding-top: 0
 
 @media screen and (min-width: 1440px)
   h1
